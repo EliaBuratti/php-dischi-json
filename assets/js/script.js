@@ -6,6 +6,8 @@ createApp({
 
         return {
             ListDisc: [],
+            overlay: false,
+            discInfo: '',
         }
     },
 
@@ -21,6 +23,16 @@ createApp({
     },
 
     methods: {
+
+        cardInfo(numCard) {
+            console.log('ciccato');
+            this.discInfo = '';
+
+            axios.get('server.php').then(response => {
+                console.log(response);
+                this.discInfo = response.data[numCard];
+            })
+        }
 
     },
 }).mount('#app');
