@@ -8,7 +8,7 @@ createApp({
             ListDisc: [],
             overlay: false,
             discInfo: '',
-            disc: '',
+            disc: [],
 
         }
     },

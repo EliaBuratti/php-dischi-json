@@ -19,52 +19,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- style.css -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-
     <style>
-        body {
-            background-color: #445D48;
-            height: 100vh;
-            width: 100vw;
-            overflow: hidden;
-        }
-
-        .eb_card {
-            cursor: pointer;
-            transition: 0.5s;
-        }
-
-        .eb_card-color {
-            background-color: #FDE5D4;
-            color: #001524;
-        }
-
-        .eb_card:hover {
-            transform: scale(1.1);
-        }
-
-        nav {
-            background-color: #001524;
-            height: 4rem;
-        }
-
-        .eb_overlay-info {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 999;
-            width: 100%;
-            height: 100%;
-            background-color: #445d48d9;
-        }
-
-        .eb_overlay-info>div {
-            width: 20%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+        <?php include 'assets/css/style.css'  ?>
     </style>
 
 </head>
