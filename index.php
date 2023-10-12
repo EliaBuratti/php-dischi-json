@@ -86,11 +86,11 @@
 
             <div v-if="overlay" class="eb_overlay-info ">
                 <div class="card p-4 eb_card-color">
-                    <img :src=" discInfo.poster " class="w-75 mx-auto rounded img-fluid" :alt="discInfo.title">
+                    <img :src=" disc.poster " class="w-75 mx-auto rounded img-fluid" :alt="disc.title">
                     <div class="card-body text-center">
-                        <h5 class="card-title">{{ discInfo.title }}</h5>
-                        <p class="card-text">{{ discInfo.author }}</p>
-                        <h6>{{ discInfo.year }}</h6>
+                        <h5 class="card-title">{{ disc.title }}</h5>
+                        <p class="card-text">{{ disc.author }}</p>
+                        <h6>{{ disc.year }}</h6>
                     </div>
                     <button @click="overlay = !overlay" class="btn btn-danger">Close</button>
                 </div>
@@ -100,7 +100,7 @@
             <div class="row gap-4 justify-content-center position-relative">
 
 
-                <div v-for="(disc, i) in ListDisc" :key="disc + i" @click="cardInfo(i), overlay = !overlay" class="card px-0 pt-4 eb_card eb_card-color" style="width: 18rem;">
+                <div v-for="(disc, i) in ListDisc" :key="disc + i" @click="cardInfo(i)" class="card px-0 pt-4 eb_card eb_card-color" style="width: 18rem;">
                     <img :src=" disc.poster " class="w-75 mx-auto rounded img-fluid" :alt="disc.title">
                     <div class="card-body text-center">
                         <h5 class="card-title">{{ disc.title }}</h5>

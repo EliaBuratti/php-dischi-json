@@ -8,6 +8,8 @@ createApp({
             ListDisc: [],
             overlay: false,
             discInfo: '',
+            disc: '',
+
         }
     },
 
@@ -16,7 +18,7 @@ createApp({
         //console.log(this.ListDisc);
 
         axios.get('server.php').then(response => {
-            console.log(response);
+            //console.log(response);
             this.ListDisc = response.data;
         })
 
@@ -24,14 +26,20 @@ createApp({
 
     methods: {
 
-        cardInfo(numCard) {
-            console.log('ciccato');
-            this.discInfo = '';
+        cardInfo(numDisc) {
+            console.log('clccato');
 
-            axios.get('server.php').then(response => {
+
+            axios.get('server.php', {
+                params: {
+                    discInfo: numDisc,
+                }
+            }).then(response => {
                 console.log(response);
-                this.discInfo = response.data[numCard];
+                this.disc = response.data;
             })
+
+            this.overlay = !this.overlay
         }
 
     },
